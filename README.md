@@ -603,9 +603,9 @@ Find files containing text (`-l` outputs only the file names, `-i` ignores the c
 
 To use exec with find command:
 
-find . -name INCAR_mag -exec grep "MAGMOM" {} \;
+    find . -name INCAR_mag -exec grep "MAGMOM" {} \;
 
 Combining find, bash -c and exec:
 
-find . -name INCAR_mag -exec bash -c 'dir=$(dirname "$0"); grep "F=" "$dir/OSZICAR" | tail -n 1 '  {} \;
+    find . -name INCAR_mag -exec bash -c 'dir=$(dirname "$0"); grep "F=" "$dir/OSZICAR" | tail -n 1 '  {} \;
 
