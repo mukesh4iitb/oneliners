@@ -609,3 +609,18 @@ Combining find, bash -c and exec:
 
     find . -name INCAR_mag -exec bash -c 'dir=$(dirname "$0"); grep "F=" "$dir/OSZICAR" | tail -n 1 '  {} \;
 
+Creating a mongodb data base:
+
+    mkdir -p ~/mongodb_data   (A directory for database)
+
+    mongod --dbpath ~/mongodb_data  (Start mongodb server)
+
+To restore mongodb data files:
+
+    mongorestore --db cluster_database ./mongo_backup/cluster_database  (Note name of database here cluster_database should be same).
+
+If there are multiple mongodb data:
+
+    mongorestore --drop backup_dir (It will clean/overwrite)
+    
+
