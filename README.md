@@ -623,4 +623,8 @@ If there are multiple mongodb data:
 
     mongorestore --drop backup_dir (It will clean/overwrite)
     
+To find largest files (20) from a given folder:
+
+    find . -type f -exec du -h {} + | sort -hr | head -n 20
+    
 
