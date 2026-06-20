@@ -623,8 +623,14 @@ If there are multiple mongodb data:
 
     mongorestore --drop backup_dir (It will clean/overwrite)
     
-To find largest files (20) from a given folder:
+To find largest files (20) from a given folder: Note du has GUI in ubuntu called "disk usage analysis/Application"
 
     find . -type f -exec du -h {} + | sort -hr | head -n 20
-    
 
+To find largest (10) from a given folder:
+
+    du -sh ./* | sort -hr | head -10
+
+To find all storage drives and their free spaces: Note df has GUI in ubuntu called Disks
+
+    df -h 
