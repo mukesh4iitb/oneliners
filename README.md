@@ -623,6 +623,10 @@ If there are multiple mongodb data:
 
     mongorestore --drop backup_dir (It will clean/overwrite)
     
+SSH reverse tunnel with desktop port 27017 (used for mongodb) and cluster port 27018
+
+    ssh -R 27018:localhost:27017 usename@cluster_ip
+    
 To find largest files (20) from a given folder: Note du has GUI in ubuntu called "disk usage analysis/Application"
 
     find . -type f -exec du -h {} + | sort -hr | head -n 20
