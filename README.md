@@ -16,6 +16,7 @@ Useful bash one-liners useful for bioinformatics (and [some, more generally usef
 - [GFF3 Annotations](#gff3-annotations)
 - [Other generally useful aliases for your .bashrc](#other-generally-useful-aliases-for-your-bashrc)
 - [Etc.](#etc)
+- [MS added commands](#MS-added-commands)
 
 
 
@@ -599,7 +600,8 @@ Find files containing text (`-l` outputs only the file names, `-i` ignores the c
 
     grep -lir "some text" *
 
-**MS added commands:**
+## MS added commands
+[[back to top](#contents)]
 
 To use exec with find command:
 
