@@ -640,3 +640,16 @@ To find largest (10) from a given folder:
 To find all storage drives and their free spaces: Note df has GUI in ubuntu called Disks
 
     df -h 
+    
+To change the permission to owner-only:
+    
+    find gaphelpers -type d -exec chmod 700 {} \;
+
+    find gaphelpers -type f -exec chmod 600 {} \;
+
+Also, see the uses of rysc, which preserve the setgrid bit, which is required in research group folder:
+
+    rsync -avz testdir --chmod=Dg+s <username>@rsync.hpcc.msu.edu:/mnt/research/<groupname>/
+
+    https://docs.icer.msu.edu/Research_Space/
+    
